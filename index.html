@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JETECH Tecnologia</title>
+<meta name="description" content="JETECH Tecnologia: desenvolvimento de software. Criadora do Medicondo e do Provah.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #ffffff;
+    --surface: #f4f7fc;
+    --fg: #00153e;
+    --muted: #4d5b75;
+    --line: #e1e7f0;
+    --accent: #0a5fd6;
+    --brand-gradient: linear-gradient(120deg, #00a2ff 0%, #0a5fd6 45%, #0a1f8f 100%);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.6 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header { border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.2rem; color: var(--fg); }
+  .brand:hover { text-decoration: none; }
+  .brand img { height: 30px; width: auto; }
+  nav a { margin-left: 24px; color: var(--muted); font-size: .95rem; }
+
+  .hero { padding: 72px 0 64px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: center; }
+  .hero-logo { width: 100%; max-width: 340px; height: auto; justify-self: center; }
+  .hero h1 .grad { background: var(--brand-gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; margin: 0 0 16px; letter-spacing: -.02em; }
+  .hero p { font-size: 1.15rem; color: var(--muted); max-width: 620px; margin: 0; }
+
+  section { padding: 56px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 1.5rem; margin: 0 0 8px; letter-spacing: -.01em; }
+  .lead { color: var(--muted); margin: 0 0 32px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; min-height: 56px; }
+  .app-icon { width: 56px; height: auto; }
+  .wordmark { height: 56px; width: auto; border-radius: 12px; }
+  .card h3 { margin: 0 0 2px; font-size: 1.3rem; }
+  .card-head .tag { margin: 0; }
+  .tag { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 12px; }
+  .card p { margin: 0 0 20px; color: var(--muted); flex: 1; }
+  .links { display: flex; flex-wrap: wrap; gap: 16px; font-weight: 500; font-size: .95rem; }
+
+  .contact p { margin: 4px 0; }
+
+  footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--muted); font-size: .9rem; }
+  footer p { margin: 2px 0; }
+
+  @media (max-width: 760px) {
+    .hero { padding: 40px 0 48px; grid-template-columns: 1fr; gap: 32px; }
+    .hero-logo { max-width: 220px; order: -1; }
+  }
+  @media (max-width: 480px) {
+    nav { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="simbolo.png" alt="">Jetech</a>
+    <nav>
+      <a href="#produtos">Produtos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <h1>Software para quem faz <span class="grad">a operação acontecer.</span></h1>
+      <p>A JETECH Tecnologia desenvolve aplicativos e sistemas que levam o trabalho de campo para o digital: menos papel, mais controle e informação confiável.</p>
+    </div>
+    <img class="hero-logo" src="logo.png" alt="Logomarca Jetech">
+  </div>
+
+  <section id="produtos">
+    <h2>Produtos</h2>
+    <p class="lead">Soluções desenvolvidas e mantidas pela JETECH.</p>
+    <div class="grid">
+      <article class="card">
+        <div class="card-head">
+          <img class="app-icon" src="medicondo.png" alt="Ícone do Medicondo">
+          <div>
+            <h3>Medicondo</h3>
+            <div class="tag">Aplicativo · Android</div>
+          </div>
+        </div>
+        <p>Leitura mensal dos medidores de água e gás de condomínios, com foto de cada medição, funcionamento offline e rateio das faturas de consumo entre as unidades.</p>
+        <div class="links">
+          <a href="https://api.medicondo.com.br/privacidade">Política de privacidade</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-head">
+          <img class="wordmark" src="provah.png" alt="Provah">
+          <div class="tag">Sistema web</div>
+        </div>
+        <p>Organiza e controla as evidências que a equipe de campo envia pelo WhatsApp, deixando tudo registrado, rastreável e fácil de consultar.</p>
+        <div class="links">
+          <a href="https://www.provah-web.com.br">Acessar o Provah</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="contato" class="contact">
+    <h2>Contato</h2>
+    <p class="lead">Fale com a gente sobre os nossos produtos ou sobre um projeto.</p>
+    <p><a href="mailto:contato@jetech-tec.com.br">contato@jetech-tec.com.br</a></p>
+    <p>Privacidade e dados pessoais (LGPD): <a href="mailto:privacidade@jetech-tec.com.br">privacidade@jetech-tec.com.br</a></p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>JETECH TECNOLOGIA LTDA</strong> · CNPJ 69.577.116/0001-94</p>
+    <p>Av. Senador Vitorino Freire, 01, Edif. São Luís Offices, sala 706, Areinha, São Luís/MA, CEP 65030-015</p>
+    <p>© 2026 JETECH Tecnologia</p>
+  </div>
+</footer>
+
+</body>
+</html>
